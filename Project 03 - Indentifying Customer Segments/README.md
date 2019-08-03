@@ -1,4 +1,4 @@
-# Identifying customer segments with Arvato
+# P-03: Identifying customer segments with Arvato
 
 ## Introduction
 The 'Identifying customer segments' project is part of Udacity's Data Scientist Nanodegree. The goal is to identify potential customer segments for a mail-based sales company from demographic data of individuals living in Germany. The data was provided by Arvato, a Bertelsmann division.
