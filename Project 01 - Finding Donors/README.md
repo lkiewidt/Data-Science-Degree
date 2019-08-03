@@ -1,4 +1,4 @@
-# Finding Donors with Charity ML
+# P01: Finding Donors with Charity ML
 
 ## Introduction
 The 'Finding Donors with Charity ML' project is part of Udacity's Data Scientist Nanodegree. The goal is to identify individuals as potential donors for Charity ML, a fictious charity organization, based on their employment and social features. An individual income of at least 50,000 USD serves as label to identify a potential donor. The data originates from the US cencus. In the project, a training-evaluation pipeline for different supervised machine algorithms is developed. 
