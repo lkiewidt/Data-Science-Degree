@@ -9,4 +9,4 @@ During my *Data Science Nanodegree* at [Udacity](https://eu.udacity.com), I coml
 
 **Keywords:** supervised learning, classification, Naive Bayes, Support Vector Machine, Random Forest, parameter tuning
 
-[**Link to jupyter notebook**](./Project 01 - Finding Donors/finding_donors.ipynb)
+[**Link to jupyter notebook**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2001%20-%20Finding%20Donors/finding_donors.ipynb)
