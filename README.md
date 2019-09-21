@@ -26,3 +26,13 @@ During my *Data Science Nanodegree* at [Udacity](https://eu.udacity.com), I coml
 **Keywords:** unsupervised learning, Principal Component Analysis (PCA), clustering, k-Means, data wrangling, feature engineering
 
 [**Link to jupyter notebook**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2003%20-%20Indentifying%20Customer%20Segments/Identify_Customer_Segments.ipynb)
+
+
+## Project 04: Date Science blog post
+**Abstract:** In this project, data from [Nature's 2017 Graduate Survey](https://www.nature.com/nature/journal/v550/n7677/full/nj7677-549a.html) was analyzed to find out more about the motivation of students to pursue a PhD, the skills they learn, and their satisfion with their PhD program. Further, the possibility to predict the satisfaction score based on prior features that are known before the PhD students start, such as personal motivation and the field they work in, was explored. Prior to the analysis, the data was cleaned and useful features were selected and properly encoded. The analysis showed that most students pursue a PhD to follow an academic career although they are aware that faculty positions at universities are scarce. Nevertheless, PhD students obtain a broad range of skills from collecting and analyzing data, over communicating their findings, to managing people and projects. In summary the data shows that the decision to do a PhD is a highly individual one that probably depends on many personal aspects that are difficult to capture and extract from data.
+
+**Keywords:** data science, data wrangling, feature selection, visualization, data-based communication
+
+[**Link to jupyter notebokk**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2004%20-%20Data%20Science%20Blog%20Post/dataScience_blogPost_NaturePhDSurvery.ipynb)
+
+[**Link to blog post**](https://medium.com/@kiewidt/to-phd-or-not-to-phd-4312cdb862c5)
