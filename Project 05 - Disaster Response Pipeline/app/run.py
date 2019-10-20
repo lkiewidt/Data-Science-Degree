@@ -1,6 +1,7 @@
 import json
 import plotly
 import pandas as pd
+import numpy as np
 
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -10,6 +11,9 @@ from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
 from sklearn.externals import joblib
 from sqlalchemy import create_engine
+
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score
 
 
 app = Flask(__name__)
@@ -32,6 +36,22 @@ df = pd.read_sql_table('cleaned_messages', engine)
 # load model
 model = joblib.load("../models/message_classifier.pkl")
 
+# assign features and labels
+X = df['message'].values
+Y = df.drop(['id', 'message', 'original', 'genre'], axis=1).values
+
+# split into test and training data
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.25, shuffle=True, random_state=42)
+
+# make predictions on test data
+Y_predict = model.predict(X_test)
+
+# calculate f1 score for each class
+f1_scores = np.zeros(Y_test.shape[1])
+
+for i in range(f1_scores.size):
+    f1_scores[i] = f1_score(Y_test[:, i], Y_predict[:, i], average='macro')
+    
 
 # index webpage displays cool visuals and receives user input text for model
 @app.route('/')
@@ -53,6 +73,24 @@ def index():
             'data': [
                 Bar(
                     x=class_names,
+                    y=f1_scores
+                )
+            ],
+
+            'layout': {
+                'title': 'f1 score for each class',
+                'yaxis': {
+                    'title': "f1 score"
+                },
+                'xaxis': {
+                    'title': ""
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=class_names,
                     y=class_counts
                 )
             ],
@@ -63,7 +101,7 @@ def index():
                     'title': "Count"
                 },
                 'xaxis': {
-                    'title': "Class"
+                    'title': ""
                 }
             }
         }

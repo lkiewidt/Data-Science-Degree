@@ -9,7 +9,7 @@ import pickle
 
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.metrics import f1_score, precision_score, recall_score
@@ -101,13 +101,23 @@ def build_model():
         untrained model
     """
     
-    # construct ML pipeline (choosen clf parameters were optimized via grid search)
+    # construct ML pipeline
     steps = [('count', CountVectorizer(tokenizer=tokenize)),
              ('tfidf', TfidfTransformer()),
-             ('clf', MultiOutputClassifier(AdaBoostClassifier(n_estimators=100, learning_rate=0.5, random_state=42)))
+             ('clf', MultiOutputClassifier(RandomForestClassifier(random_state=42)))
             ]
-
-    model = Pipeline(steps=steps)
+    
+    pipeline = Pipeline(steps=steps)
+    
+    # run grid search to optimize model parameters
+    # RandomForest parameters
+    parameters = {
+        'clf__estimator__n_estimators': [50, 100, 200],
+        'clf__estimator__min_samples_split': [2, 10, 50, 100]
+    }
+    
+    # enable refitting with best set of parameters
+    model = GridSearchCV(pipeline, param_grid=parameters, refit=True)
     
     return model
 
@@ -216,7 +226,7 @@ def main():
         print('Building model...')
         model = build_model()
         
-        print('Training model...')
+        print('Training/optimizing model...')
         model.fit(X_train, Y_train)
         
         print('Evaluating model...')
