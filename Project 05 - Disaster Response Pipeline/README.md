@@ -16,11 +16,17 @@ The following Python libraries are use in the project:
 
 ## Usage
 Repository files:
+
 `data/ETL Pipeline Preparation.ipynb`: Jupyter notebook to develop the ETL pipeline
+
 `data/process_data.py`: Python script to run the ETL pipeline
+
 `model/ML Pipeline Preparation.ipynb`: Jupyter notebook to develop the ML pipeline
+
 `model/train_classifier`: Python script to run the ML pipeline
+
 `app/run.py`: Python script to start the web-based app
+
 
 To process and clean new datasets, run
 
