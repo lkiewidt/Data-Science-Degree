@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.multioutput import MultiOutputClassifier
-from sklearn.metrics import f1_score, precision_score, recall_score
+from sklearn.metrics import f1_score, precision_score, recall_score, classification_report
 
 # download stopwords
 nltk.download('stopwords')
@@ -136,35 +136,12 @@ def report_model_scores(tests, predictions, classes):
         
     classes : list
         classes
-        
-    Returns
-    -------
-    scores : ndarray
-        array of calculated scores (class in row, scores in columns: precision, recall, f1)
     """
-    # get number of classes and initialize scores array
-    n_classes = len(classes)
-    scores = np.zeros((n_classes, 3))
+    # print classification report
+    report = classification_report(tests, predictions, target_names=classes)
+    print(report)
     
-    # calculate precision, recall, and f1 for each class
-    for i in range(n_classes):
-        scores[i, 0] = precision_score(tests[:, i], predictions[:, i], average='weighted')
-        scores[i, 1] = recall_score(tests[:, i], predictions[:, i], average='weighted')
-        scores[i, 2] = f1_score(tests[:, i], predictions[:, i], average='weighted')
-    
-    # sort scores in ascending order by f1 score
-    idx = np.argsort(scores, axis=0)[:, 0]
-    
-    # print scores for each class in ascending order
-    for i in range(n_classes):
-        print("{0:25s}{1:.2f}\t{2:.2f}\t{3:.2f}".format(classes[idx[i]], scores[idx[i], 0],
-                                                        scores[idx[i], 1], scores[idx[i], 2]))
-    
-    # calculate and print average scores
-    averages = np.average(scores, axis=0)
-    print("\n{0:25s}{1:.2f}\t{2:.2f}\t{3:.2f}".format("AVERAGES", averages[0], averages[1], averages[2]))
-    
-    return scores
+    return 0
 
 
 def evaluate_model(model, X_test, Y_test, category_names):

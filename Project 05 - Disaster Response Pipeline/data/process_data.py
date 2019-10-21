@@ -56,7 +56,7 @@ def clean_data(df):
     
     # extract category names from first row
     row = categories.loc[0]
-    category_colnames = row.apply(lambda s: s[:-2]).to_list()
+    category_colnames = row.apply(lambda s: s[:-2]).tolist()
     
     # rename category columns
     categories.columns = category_colnames
@@ -77,6 +77,9 @@ def clean_data(df):
     
     # drop duplicate entries
     df.drop_duplicates(inplace=True)
+    
+    # replace 2s by 1s
+    df.replace(2, 1, inplace=True)
     
     return df
 
