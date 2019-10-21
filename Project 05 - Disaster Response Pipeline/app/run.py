@@ -13,7 +13,7 @@ from sklearn.externals import joblib
 from sqlalchemy import create_engine
 
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import f1_score
+from sklearn.metrics import classification_report
 
 
 app = Flask(__name__)
@@ -47,10 +47,12 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.25, shuffl
 Y_predict = model.predict(X_test)
 
 # calculate f1 score for each class
+report = classification_report(Y_test, Y_predict, output_dict=True)
+
 f1_scores = np.zeros(Y_test.shape[1])
 
 for i in range(f1_scores.size):
-    f1_scores[i] = f1_score(Y_test[:, i], Y_predict[:, i], average='macro')
+    f1_scores[i] = report['%i' % i]['f1-score']
     
 
 # index webpage displays cool visuals and receives user input text for model
