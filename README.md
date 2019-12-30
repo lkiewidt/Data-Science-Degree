@@ -33,7 +33,7 @@ During my *Data Science Nanodegree* at [Udacity](https://eu.udacity.com), I coml
 
 **Keywords:** data science, data wrangling, feature selection, visualization, data-based communication
 
-[**Link to jupyter notebokk**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2004%20-%20Data%20Science%20Blog%20Post/dataScience_blogPost_NaturePhDSurvery.ipynb)
+[**Link to jupyter notebook**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2004%20-%20Data%20Science%20Blog%20Post/dataScience_blogPost_NaturePhDSurvery.ipynb)
 
 [**Link to blog post**](https://medium.com/@kiewidt/to-phd-or-not-to-phd-4312cdb862c5)
 
