@@ -46,3 +46,11 @@ During my *Data Science Nanodegree* at [Udacity](https://eu.udacity.com), I coml
 [**Link to ETL pipeline jupyter notebokk**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2005%20-%20Disaster%20Response%20Pipeline/data/ETL%20Pipeline%20Preparation.ipynb)
 
 [**Link to ML pipeline jupyter notebokk**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2005%20-%20Disaster%20Response%20Pipeline/models/ML%20Pipeline%20Preparation.ipynb)
+
+
+## Project 06: Recommendation Systems
+**Abstract:** In the Recommendation Systems project, several recommendation techniques were implemented for real data from IBM's Watson Studio platform. The goal was to recommend articles on Watson Studio to new and existing users. For existing users, user-user-based collaborative filerting was applied to make recommendations based on the similartiy to other users, total article interactions, and total article views. For new users, for whom the similarity to other users could not be determined due to missing viewing history (cold-start problem), a ranked-based recommendation technique was applied, which recommends the most-viewed articles. Finally, matrix factorization (singular value decomposition, SVD) was implemented to identify latent features and predict user-item interactions.
+
+**Keywords:** collaborative filtering, rank-based recommendations, user-based recommendations, matrix factorization, singular value decomposition (SVD)
+
+[**Link to jupyter notebokk**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2006%20-%20Recommendation%20Engine%20IBM%20Studio/Recommendations_with_IBM.ipynb)
