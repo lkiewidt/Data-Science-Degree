@@ -43,9 +43,9 @@ During my *Data Science Nanodegree* at [Udacity](https://eu.udacity.com), I coml
 
 **Keywords:** natural language processing (NLP), ETL pipelines, ML pipelines, web development
 
-[**Link to ETL pipeline jupyter notebokk**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2005%20-%20Disaster%20Response%20Pipeline/data/ETL%20Pipeline%20Preparation.ipynb)
+[**Link to ETL pipeline jupyter notebook**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2005%20-%20Disaster%20Response%20Pipeline/data/ETL%20Pipeline%20Preparation.ipynb)
 
-[**Link to ML pipeline jupyter notebokk**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2005%20-%20Disaster%20Response%20Pipeline/models/ML%20Pipeline%20Preparation.ipynb)
+[**Link to ML pipeline jupyter notebook**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2005%20-%20Disaster%20Response%20Pipeline/models/ML%20Pipeline%20Preparation.ipynb)
 
 
 ## Project 06: Recommendation Systems
@@ -53,4 +53,4 @@ During my *Data Science Nanodegree* at [Udacity](https://eu.udacity.com), I coml
 
 **Keywords:** collaborative filtering, rank-based recommendations, user-based recommendations, matrix factorization, singular value decomposition (SVD)
 
-[**Link to jupyter notebokk**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2006%20-%20Recommendation%20Engine%20IBM%20Studio/Recommendations_with_IBM.ipynb)
+[**Link to jupyter notebook**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2006%20-%20Recommendation%20Engine%20IBM%20Studio/Recommendations_with_IBM.ipynb)
