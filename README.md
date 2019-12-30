@@ -36,3 +36,13 @@ During my *Data Science Nanodegree* at [Udacity](https://eu.udacity.com), I coml
 [**Link to jupyter notebokk**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2004%20-%20Data%20Science%20Blog%20Post/dataScience_blogPost_NaturePhDSurvery.ipynb)
 
 [**Link to blog post**](https://medium.com/@kiewidt/to-phd-or-not-to-phd-4312cdb862c5)
+
+
+## Project 05: Disaster Response Pipeline
+**Abstract:** In the Desaster Response project, text messages send during disaster situations were analyzed and classified into several categories (e.g. fire, flood, storm, etc.) to allow quick and effective deployment of support. Therefore, ETL (extract-transform-load) and ML (machine learning) pipelines were implemented to enable automated and straightfoward processing of datasets and training and testing of the classifier. The trained classifier was deployed in a web-based app to classify incoming messages from a web-browser.
+
+**Keywords:** natural language processing (NLP), ETL pipelines, ML pipelines, web development
+
+[**Link to ETL pipeline jupyter notebokk**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2005%20-%20Disaster%20Response%20Pipeline/data/ETL%20Pipeline%20Preparation.ipynb)
+
+[**Link to ML pipeline jupyter notebokk**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2005%20-%20Disaster%20Response%20Pipeline/models/ML%20Pipeline%20Preparation.ipynb)
