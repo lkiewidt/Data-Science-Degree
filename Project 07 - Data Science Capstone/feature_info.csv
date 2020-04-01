@@ -1,0 +1,368 @@
+﻿#;FEATURE;TYPE;UNKNOWN;DESCRIBED;COMMENT;DECISION
+;;;[];309;;
+1;LNR;numerical;[];0;"probably laufende nummer = id; can be disgarded";drop
+2;AGER_TYP;categorical;[-1];1;;one-hot encode
+3;AKT_DAT_KL;categorical;[];0;"no infromation availabe on codes;";investigate
+4;ALTER_HH;ordinal;[0];1;;keep
+5;ALTER_KIND1;numerical;[];0;"age of first kid; could be included";maybe include
+6;ALTER_KIND2;numerical;[];0;"age of first kid; could be included";maybe include
+7;ALTER_KIND3;numerical;[];0;"age of first kid; could be included";maybe include
+8;ALTER_KIND4;numerical;[];0;"age of first kid; could be included";maybe include
+9;ALTERSKATEGORIE_FEIN;ordinal;[-1,0];0;"fine-grained version of ALTERSKATEGORIE_GROB; many missing data";drop
+10;ANZ_HAUSHALTE_AKTIV;numerical;[];1;;keep
+11;ANZ_HH_TITEL;numerical;[];1;;keep
+12;ANZ_KINDER;numerical;[];0;number of kids;maybe include
+13;ANZ_PERSONEN;numerical;[];1;;keep
+14;ANZ_STATISTISCHE_HAUSHALTE;numerical;[];0;"no infromation availabe on codes; could be included though";maybe include
+15;ANZ_TITEL;numerical;[];1;;keep
+16;ARBEIT;ordinal;[9];0;9 probably missing;maybe include
+17;BALLRAUM;ordinal;[-1];1;;keep
+18;CAMEO_DEU_2015;categorical;[XX,-1];1;fine grained information;"encode as number; one-hot encode"
+19;CAMEO_DEUG_2015;ordinal;[X,-1];1;coarse grained information;"encode as number; one-hot encode"
+20;CAMEO_INTL_2015;categorical;[XX,-1];1;fine grained information;"encode as number; one-hot encode"
+21;CJT_GESAMTTYP;categorical;[0];1;;one-hot encode
+22;CJT_KATALOGNUTZER;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+23;CJT_TYP_1;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+24;CJT_TYP_2;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+25;CJT_TYP_3;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+26;CJT_TYP_4;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+27;CJT_TYP_5;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+28;CJT_TYP_6;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+29;D19_BANKEN_ANZ_12;ordinal;[];1;consider unknown value as real;keep
+30;D19_BANKEN_ANZ_24;ordinal;[];1;consider unknown value as real;keep
+31;D19_BANKEN_DATUM;ordinal;[];1;consider unknown value as real;keep
+32;D19_BANKEN_DIREKT;ordinal;[];1;consider unknown value as real;keep
+33;D19_BANKEN_GROSS;ordinal;[];1;consider unknown value as real;keep
+34;D19_BANKEN_LOKAL;ordinal;[];1;consider unknown value as real;keep
+35;D19_BANKEN_OFFLINE_DATUM;ordinal;[];1;consider unknown value as real;keep
+36;D19_BANKEN_ONLINE_DATUM;ordinal;[];1;consider unknown value as real;keep
+37;D19_BANKEN_ONLINE_QUOTE_12;ordinal;[];1;consider unknown value as real;keep
+38;D19_BANKEN_REST;ordinal;[];1;consider unknown value as real;keep
+39;D19_BEKLEIDUNG_GEH;ordinal;[];1;consider unknown value as real;keep
+40;D19_BEKLEIDUNG_REST;ordinal;[];1;consider unknown value as real;keep
+41;D19_BILDUNG;ordinal;[];1;consider unknown value as real;keep
+42;D19_BIO_OEKO;ordinal;[];1;consider unknown value as real;keep
+43;D19_BUCH_CD;ordinal;[];1;consider unknown value as real;keep
+44;D19_DIGIT_SERV;ordinal;[];1;consider unknown value as real;keep
+45;D19_DROGERIEARTIKEL;ordinal;[];1;consider unknown value as real;keep
+46;D19_ENERGIE;ordinal;[];1;consider unknown value as real;keep
+47;D19_FREIZEIT;ordinal;[];1;consider unknown value as real;keep
+48;D19_GARTEN;ordinal;[];1;consider unknown value as real;keep
+49;D19_GESAMT_ANZ_12;ordinal;[];1;consider unknown value as real;keep
+50;D19_GESAMT_ANZ_24;ordinal;[];1;consider unknown value as real;keep
+51;D19_GESAMT_DATUM;ordinal;[];1;consider unknown value as real;keep
+52;D19_GESAMT_OFFLINE_DATUM;ordinal;[];1;consider unknown value as real;keep
+53;D19_GESAMT_ONLINE_DATUM;ordinal;[];1;consider unknown value as real;keep
+54;D19_GESAMT_ONLINE_QUOTE_12;ordinal;[];1;consider unknown value as real;keep
+55;D19_HANDWERK;ordinal;[];1;consider unknown value as real;keep
+56;D19_HAUS_DEKO;ordinal;[];1;consider unknown value as real;keep
+57;D19_KINDERARTIKEL;ordinal;[];1;consider unknown value as real;keep
+58;D19_KONSUMTYP;categorical;[];1;many missing data;drop
+59;D19_KONSUMTYP_MAX;categorical;[];0;"probably most frequent KONSUMTYP in cell; contains value 8 which is not in the info for KONSUMTYP";drop
+60;D19_KOSMETIK;ordinal;[];1;consider unknown value as real;keep
+61;D19_LEBENSMITTEL;ordinal;[];1;consider unknown value as real;keep
+62;D19_LETZTER_KAUF_BRANCHE;categorical;[D19_UNBEKANNT];0;"which category last bought; seems to be a lot of missing data";drop
+63;D19_LOTTO;ordinal;[];1;consider unknown value as real;keep
+64;D19_NAHRUNGSERGAENZUNG;ordinal;[];1;consider unknown value as real;keep
+65;D19_RATGEBER;ordinal;[];1;consider unknown value as real;keep
+66;D19_REISEN;ordinal;[];1;consider unknown value as real;keep
+67;D19_SAMMELARTIKEL;ordinal;[];1;consider unknown value as real;keep
+68;D19_SCHUHE;ordinal;[];1;consider unknown value as real;keep
+69;D19_SONSTIGE;ordinal;[];1;consider unknown value as real;keep
+70;D19_SOZIALES;ordinal;[];0;could be similar to the othe D19 categories;keep
+71;D19_TECHNIK;ordinal;[];1;consider unknown value as real;keep
+72;D19_TELKO_ANZ_12;ordinal;[];1;consider unknown value as real;keep
+73;D19_TELKO_ANZ_24;ordinal;[];1;consider unknown value as real;keep
+74;D19_TELKO_DATUM;ordinal;[];1;consider unknown value as real;keep
+75;D19_TELKO_MOBILE;ordinal;[];1;consider unknown value as real;keep
+76;D19_TELKO_OFFLINE_DATUM;ordinal;[];1;consider unknown value as real;keep
+77;D19_TELKO_ONLINE_DATUM;ordinal;[];1;consider unknown value as real;keep
+78;D19_TELKO_ONLINE_QUOTE_12;ordinal;[];0;could be similar to the othe D19 categories;keep
+79;D19_TELKO_REST;ordinal;[];1;consider unknown value as real;keep
+80;D19_TIERARTIKEL;ordinal;[];1;consider unknown value as real;keep
+81;D19_VERSAND_ANZ_12;ordinal;[];1;consider unknown value as real;keep
+82;D19_VERSAND_ANZ_24;ordinal;[];1;consider unknown value as real;keep
+83;D19_VERSAND_DATUM;ordinal;[];1;consider unknown value as real;keep
+84;D19_VERSAND_OFFLINE_DATUM;ordinal;[];1;consider unknown value as real;keep
+85;D19_VERSAND_ONLINE_DATUM;ordinal;[];1;consider unknown value as real;keep
+86;D19_VERSAND_ONLINE_QUOTE_12;ordinal;[];1;consider unknown value as real;keep
+87;D19_VERSAND_REST;ordinal;[];1;consider unknown value as real;keep
+88;D19_VERSI_ANZ_12;ordinal;[];1;consider unknown value as real;keep
+89;D19_VERSI_ANZ_24;ordinal;[];1;consider unknown value as real;keep
+90;D19_VERSI_DATUM;ordinal;[];0;could be similar to the other VERSI categories;keep
+91;D19_VERSI_OFFLINE_DATUM;ordinal;[];0;could be similar to the other VERSI categories;keep
+92;D19_VERSI_ONLINE_DATUM;ordinal;[];0;could be similar to the other VERSI categories;keep
+93;D19_VERSI_ONLINE_QUOTE_12;ordinal;[];0;could be similar to the other VERSI categories;keep
+94;D19_VERSICHERUNGEN;ordinal;[];1;consider unknown value as real;keep
+95;D19_VOLLSORTIMENT;ordinal;[];1;consider unknown value as real;keep
+96;D19_WEIN_FEINKOST;ordinal;[];1;consider unknown value as real;keep
+97;DSL_FLAG;binary;[];0;probably binary variable showing DSL internet access;keep
+98;EINGEFUEGT_AM;date;[];0;probably when entry was added to dataset (not relevant for anaylsis);drop
+99;EINGEZOGENAM_HH_JAHR;numerical;[];0;probably when individual moved into the houshold;keep
+100;EWDICHTE;ordinal;[-1];1;;keep
+101;EXTSEL992;categorical;[];0;"lots of missing data; discard";drop
+102;FINANZ_ANLEGER;ordinal;[-1];1;;keep
+103;FINANZ_HAUSBAUER;ordinal;[-1];1;;keep
+104;FINANZ_MINIMALIST;ordinal;[-1];1;;keep
+105;FINANZ_SPARER;ordinal;[-1];1;;keep
+106;FINANZ_UNAUFFAELLIGER;ordinal;[-1];1;;keep
+107;FINANZ_VORSORGER;ordinal;[-1];1;;keep
+108;FINANZTYP;categorical;[-1];1;;one-hot encode
+109;FIRMENDICHTE;ordinal;[-1];0;probably similar to EWDICHTE;keep
+110;GEBAEUDETYP;categorical;[-1,0];1;;one-hot encode
+111;GEBAEUDETYP_RASTER;ordinal;[];1;;keep
+112;GEBURTSJAHR;numerical;[0];1;;keep
+113;GEMEINDETYP;categorical;[];0;"no infromation availabe on codes; could be included though";drop
+114;GFK_URLAUBERTYP;categorical;[];1;;one-hot encode
+115;GREEN_AVANTGARDE;binary;[];1;;keep
+116;HEALTH_TYP;ordinal;[-1];1;;keep
+117;HH_DELTA_FLAG;binary;[];0;no information on meaning;drop
+118;HH_EINKOMMEN_SCORE;ordinal;[-1,0];1;;keep
+119;INNENSTADT;ordinal;[-1];1;;keep
+120;KBA05_ALTER1;ordinal;[-1,9];1;;keep
+121;KBA05_ALTER2;ordinal;[-1,9];1;;keep
+122;KBA05_ALTER3;ordinal;[-1,9];1;;keep
+123;KBA05_ALTER4;ordinal;[-1,9];1;;keep
+124;KBA05_ANHANG;ordinal;[-1,9];1;;keep
+125;KBA05_ANTG1;ordinal;[-1];1;;keep
+126;KBA05_ANTG2;ordinal;[-1];1;;keep
+127;KBA05_ANTG3;ordinal;[-1];1;;keep
+128;KBA05_ANTG4;ordinal;[-1];1;;keep
+129;KBA05_AUTOQUOT;ordinal;[-1,9];1;;keep
+130;KBA05_BAUMAX;ordinal;[-1,0];1;;keep
+131;KBA05_CCM1;ordinal;[-1,9];1;;keep
+132;KBA05_CCM2;ordinal;[-1,9];1;;keep
+133;KBA05_CCM3;ordinal;[-1,9];1;;keep
+134;KBA05_CCM4;ordinal;[-1,9];1;;keep
+135;KBA05_DIESEL;ordinal;[-1,9];1;;keep
+136;KBA05_FRAU;ordinal;[-1,9];1;;keep
+137;KBA05_GBZ;ordinal;[-1,0];1;;keep
+138;KBA05_HERST1;ordinal;[-1,9];1;;keep
+139;KBA05_HERST2;ordinal;[-1,9];1;;keep
+140;KBA05_HERST3;ordinal;[-1,9];1;;keep
+141;KBA05_HERST4;ordinal;[-1,9];1;;keep
+142;KBA05_HERST5;ordinal;[-1,9];1;;keep
+143;KBA05_HERSTTEMP;ordinal;[-1,9];1;;keep
+144;KBA05_KRSAQUOT;ordinal;[-1,9];1;;keep
+145;KBA05_KRSHERST1;ordinal;[-1,9];1;;keep
+146;KBA05_KRSHERST2;ordinal;[-1,9];1;;keep
+147;KBA05_KRSHERST3;ordinal;[-1,9];1;;keep
+148;KBA05_KRSKLEIN;ordinal;[-1,9];1;;keep
+149;KBA05_KRSOBER;ordinal;[-1,9];1;;keep
+150;KBA05_KRSVAN;ordinal;[-1,9];1;;keep
+151;KBA05_KRSZUL;ordinal;[-1,9];1;;keep
+152;KBA05_KW1;ordinal;[-1,9];1;;keep
+153;KBA05_KW2;ordinal;[-1,9];1;;keep
+154;KBA05_KW3;ordinal;[-1,9];1;;keep
+155;KBA05_MAXAH;ordinal;[-1,9];1;;keep
+156;KBA05_MAXBJ;ordinal;[-1,9];1;;keep
+157;KBA05_MAXHERST;ordinal;[-1,9];1;;keep
+158;KBA05_MAXSEG;ordinal;[-1,9];1;;keep
+159;KBA05_MAXVORB;ordinal;[-1,9];1;;keep
+160;KBA05_MOD1;ordinal;[-1,9];1;;keep
+161;KBA05_MOD2;ordinal;[-1,9];1;;keep
+162;KBA05_MOD3;ordinal;[-1,9];1;;keep
+163;KBA05_MOD4;ordinal;[-1,9];1;;keep
+164;KBA05_MOD8;ordinal;[-1,9];1;;keep
+165;KBA05_MODTEMP;ordinal;[-1,9];1;;keep
+166;KBA05_MOTOR;ordinal;[-1,9];1;;keep
+167;KBA05_MOTRAD;ordinal;[-1,9];1;;keep
+168;KBA05_SEG1;ordinal;[-1,9];1;;keep
+169;KBA05_SEG10;ordinal;[-1,9];1;;keep
+170;KBA05_SEG2;ordinal;[-1,9];1;;keep
+171;KBA05_SEG3;ordinal;[-1,9];1;;keep
+172;KBA05_SEG4;ordinal;[-1,9];1;;keep
+173;KBA05_SEG5;ordinal;[-1,9];1;;keep
+174;KBA05_SEG6;ordinal;[-1,9];1;;keep
+175;KBA05_SEG7;ordinal;[-1,9];1;;keep
+176;KBA05_SEG8;ordinal;[-1,9];1;;keep
+177;KBA05_SEG9;ordinal;[-1,9];1;;keep
+178;KBA05_VORB0;ordinal;[-1,9];1;;keep
+179;KBA05_VORB1;ordinal;[-1,9];1;;keep
+180;KBA05_VORB2;ordinal;[-1,9];1;;keep
+181;KBA05_ZUL1;ordinal;[-1,9];1;;keep
+182;KBA05_ZUL2;ordinal;[-1,9];1;;keep
+183;KBA05_ZUL3;ordinal;[-1,9];1;;keep
+184;KBA05_ZUL4;ordinal;[-1,9];1;;keep
+185;KBA13_ALTERHALTER_30;ordinal;[-1];1;;keep
+186;KBA13_ALTERHALTER_45;ordinal;[-1];1;;keep
+187;KBA13_ALTERHALTER_60;ordinal;[-1];1;;keep
+188;KBA13_ALTERHALTER_61;ordinal;[-1];1;;keep
+189;KBA13_ANTG1;ordinal;[-1];0;probably the same as in KBA05;keep
+190;KBA13_ANTG2;ordinal;[-1];0;probably the same as in KBA05;keep
+191;KBA13_ANTG3;ordinal;[-1];0;probably the same as in KBA05;keep
+192;KBA13_ANTG4;ordinal;[-1];0;probably the same as in KBA05;keep
+193;KBA13_ANZAHL_PKW;numerical;[];1;;keep
+194;KBA13_AUDI;ordinal;[-1];1;;keep
+195;KBA13_AUTOQUOTE;ordinal;[-1];1;;keep
+196;KBA13_BAUMAX;ordinal;[-1,0];0;probably the same as in KBA05;keep
+197;KBA13_BJ_1999;ordinal;[-1];1;;keep
+198;KBA13_BJ_2000;ordinal;[-1];1;;keep
+199;KBA13_BJ_2004;ordinal;[-1];1;;keep
+200;KBA13_BJ_2006;ordinal;[-1];1;;keep
+201;KBA13_BJ_2008;ordinal;[-1];1;;keep
+202;KBA13_BJ_2009;ordinal;[-1];1;;keep
+203;KBA13_BMW;ordinal;[-1];1;;keep
+204;KBA13_CCM_0_1400;ordinal;[-1];1;;keep
+205;KBA13_CCM_1000;ordinal;[-1];1;;keep
+206;KBA13_CCM_1200;ordinal;[-1];1;;keep
+207;KBA13_CCM_1400;ordinal;[-1];1;;keep
+208;KBA13_CCM_1401_2500;ordinal;[-1];1;;keep
+209;KBA13_CCM_1500;ordinal;[-1];1;;keep
+210;KBA13_CCM_1600;ordinal;[-1];1;;keep
+211;KBA13_CCM_1800;ordinal;[-1];1;;keep
+212;KBA13_CCM_2000;ordinal;[-1];1;;keep
+213;KBA13_CCM_2500;ordinal;[-1];1;;keep
+214;KBA13_CCM_2501;ordinal;[-1];1;;keep
+215;KBA13_CCM_3000;ordinal;[-1];1;;keep
+216;KBA13_CCM_3001;ordinal;[-1];1;;keep
+217;KBA13_FAB_ASIEN;ordinal;[-1];1;;keep
+218;KBA13_FAB_SONSTIGE;ordinal;[-1];1;;keep
+219;KBA13_FIAT;ordinal;[-1];1;;keep
+220;KBA13_FORD;ordinal;[-1];1;;keep
+221;KBA13_GBZ;ordinal;[-1];0;probably the same as in KBA05;keep
+222;KBA13_HALTER_20;ordinal;[-1];1;;keep
+223;KBA13_HALTER_25;ordinal;[-1];1;;keep
+224;KBA13_HALTER_30;ordinal;[-1];1;;keep
+225;KBA13_HALTER_35;ordinal;[-1];1;;keep
+226;KBA13_HALTER_40;ordinal;[-1];1;;keep
+227;KBA13_HALTER_45;ordinal;[-1];1;;keep
+228;KBA13_HALTER_50;ordinal;[-1];1;;keep
+229;KBA13_HALTER_55;ordinal;[-1];1;;keep
+230;KBA13_HALTER_60;ordinal;[-1];1;;keep
+231;KBA13_HALTER_65;ordinal;[-1];1;;keep
+232;KBA13_HALTER_66;ordinal;[-1];1;;keep
+233;KBA13_HERST_ASIEN;ordinal;[-1];1;;keep
+234;KBA13_HERST_AUDI_VW;ordinal;[-1];1;;keep
+235;KBA13_HERST_BMW_BENZ;ordinal;[-1];1;;keep
+236;KBA13_HERST_EUROPA;ordinal;[-1];1;;keep
+237;KBA13_HERST_FORD_OPEL;ordinal;[-1];1;;keep
+238;KBA13_HERST_SONST;ordinal;[-1];1;;keep
+239;KBA13_HHZ;ordinal;[-1];0;probably the same as in PLZ8;keep
+240;KBA13_KMH_0_140;ordinal;[-1];1;;keep
+241;KBA13_KMH_110;ordinal;[-1];1;;keep
+242;KBA13_KMH_140;ordinal;[-1];1;;keep
+243;KBA13_KMH_140_210;ordinal;[-1];1;;keep
+244;KBA13_KMH_180;ordinal;[-1];1;;keep
+245;KBA13_KMH_210;ordinal;[-1];0;probably max. speed from 180 to 210;keep
+246;KBA13_KMH_211;ordinal;[-1];1;;keep
+247;KBA13_KMH_250;ordinal;[-1];1;;keep
+248;KBA13_KMH_251;ordinal;[-1];1;;keep
+249;KBA13_KRSAQUOT;ordinal;[-1];1;;keep
+250;KBA13_KRSHERST_AUDI_VW;ordinal;[-1];1;;keep
+251;KBA13_KRSHERST_BMW_BENZ;ordinal;[-1];1;;keep
+252;KBA13_KRSHERST_FORD_OPEL;ordinal;[-1];1;;keep
+253;KBA13_KRSSEG_KLEIN;ordinal;[-1];1;;keep
+254;KBA13_KRSSEG_OBER;ordinal;[-1];1;;keep
+255;KBA13_KRSSEG_VAN;ordinal;[-1];1;;keep
+256;KBA13_KRSZUL_NEU;ordinal;[-1];1;;keep
+257;KBA13_KW_0_60;ordinal;[-1];1;;keep
+258;KBA13_KW_110;ordinal;[-1];1;;keep
+259;KBA13_KW_120;ordinal;[-1];1;;keep
+260;KBA13_KW_121;ordinal;[-1];1;;keep
+261;KBA13_KW_30;ordinal;[-1];1;;keep
+262;KBA13_KW_40;ordinal;[-1];1;;keep
+263;KBA13_KW_50;ordinal;[-1];1;;keep
+264;KBA13_KW_60;ordinal;[-1];1;;keep
+265;KBA13_KW_61_120;ordinal;[-1];1;;keep
+266;KBA13_KW_70;ordinal;[-1];1;;keep
+267;KBA13_KW_80;ordinal;[-1];1;;keep
+268;KBA13_KW_90;ordinal;[-1];1;;keep
+269;KBA13_MAZDA;ordinal;[-1];1;;keep
+270;KBA13_MERCEDES;ordinal;[-1];1;;keep
+271;KBA13_MOTOR;ordinal;[-1];1;;keep
+272;KBA13_NISSAN;ordinal;[-1];1;;keep
+273;KBA13_OPEL;ordinal;[-1];1;;keep
+274;KBA13_PEUGEOT;ordinal;[-1];1;;keep
+275;KBA13_RENAULT;ordinal;[-1];1;;keep
+276;KBA13_SEG_GELAENDEWAGEN;ordinal;[-1];1;;keep
+277;KBA13_SEG_GROSSRAUMVANS;ordinal;[-1];1;;keep
+278;KBA13_SEG_KLEINST;ordinal;[-1];1;;keep
+279;KBA13_SEG_KLEINWAGEN;ordinal;[-1];1;;keep
+280;KBA13_SEG_KOMPAKTKLASSE;ordinal;[-1];1;;keep
+281;KBA13_SEG_MINIVANS;ordinal;[-1];1;;keep
+282;KBA13_SEG_MINIWAGEN;ordinal;[-1];1;;keep
+283;KBA13_SEG_MITTELKLASSE;ordinal;[-1];1;;keep
+284;KBA13_SEG_OBEREMITTELKLASSE;ordinal;[-1];1;;keep
+285;KBA13_SEG_OBERKLASSE;ordinal;[-1];1;;keep
+286;KBA13_SEG_SONSTIGE;ordinal;[-1];1;;keep
+287;KBA13_SEG_SPORTWAGEN;ordinal;[-1];1;;keep
+288;KBA13_SEG_UTILITIES;ordinal;[-1];1;;keep
+289;KBA13_SEG_VAN;ordinal;[-1];1;;keep
+290;KBA13_SEG_WOHNMOBILE;ordinal;[-1];1;;keep
+291;KBA13_SITZE_4;ordinal;[-1];1;;keep
+292;KBA13_SITZE_5;ordinal;[-1];1;;keep
+293;KBA13_SITZE_6;ordinal;[-1];1;;keep
+294;KBA13_TOYOTA;ordinal;[-1];1;;keep
+295;KBA13_VORB_0;ordinal;[-1];1;;keep
+296;KBA13_VORB_1;ordinal;[-1];1;;keep
+297;KBA13_VORB_1_2;ordinal;[-1];1;;keep
+298;KBA13_VORB_2;ordinal;[-1];1;;keep
+299;KBA13_VORB_3;ordinal;[-1];1;;keep
+300;KBA13_VW;ordinal;[-1];1;;keep
+301;KK_KUNDENTYP;categorical;[-1];0;probably D19_KK_KUNDENTYP;one-hot encode
+302;KKK;ordinal;[-1,0];1;;keep
+303;KOMBIALTER;ordinal;[9];0;"no infromation availabe on codes; could be included though";investigate
+304;KONSUMNAEHE;ordinal;[];1;;keep
+305;KONSUMZELLE;binary;[];0;probably whether lives in KONSUMZELLE or not;keep
+306;LP_FAMILIE_FEIN;categorical;[0];1;;one-hot encode
+307;LP_FAMILIE_GROB;categorical;[0];1;not needed as more detailed information is available in FAMILIE_FEIN;drop
+308;LP_LEBENSPHASE_FEIN;categorical;[0];1;very fine-grained information;investigate
+309;LP_LEBENSPHASE_GROB;categorical;[0];1;;investigate
+310;LP_STATUS_FEIN;ordinal;[];1;very fine-grained information;drop
+311;LP_STATUS_GROB;ordinal;[];1;;keep
+312;MIN_GEBAEUDEJAHR;numerical;[];1;;keep
+313;MOBI_RASTER;ordinal;[];0;"no infromation availabe on codes; could be included though";keep
+314;MOBI_REGIO;ordinal;[];1;;keep
+315;NATIONALITAET_KZ;categorical;[-1,0];1;;keep
+316;ONLINE_AFFINITAET;ordinal;[];1;;keep
+317;ORTSGR_KLS9;ordinal;[-1];1;;keep
+318;OST_WEST_KZ;binary;[-1];1;re-encode to binary;re-encode to binary
+319;PLZ8_ANTG1;ordinal;[-1];1;;keep
+320;PLZ8_ANTG2;ordinal;[-1];1;;keep
+321;PLZ8_ANTG3;ordinal;[-1];1;;keep
+322;PLZ8_ANTG4;ordinal;[-1];1;;keep
+323;PLZ8_BAUMAX;ordinal;[];1;;keep
+324;PLZ8_GBZ;ordinal;[-1];1;;keep
+325;PLZ8_HHZ;ordinal;[-1];1;;keep
+326;PRAEGENDE_JUGENDJAHRE;categorical;[-1,0];1;;one-hot encode
+327;REGIOTYP;ordinal;[-1,0];1;;keep
+328;RELAT_AB;ordinal;[-1,9];1;;keep
+329;RETOURTYP_BK_S;categorical;[0];1;;one-hot encode
+330;RT_KEIN_ANREIZ;ordinal;[0];0;"no infromation availabe on codes; could be included though";maybe include
+331;RT_SCHNAEPPCHEN;ordinal;[0];0;"no infromation availabe on codes; could be included though";maybe include
+332;RT_UEBERGROESSE;ordinal;[0];0;"no infromation availabe on codes; could be included though";maybe include
+333;SEMIO_DOM;ordinal;[-1,9];1;;keep
+334;SEMIO_ERL;ordinal;[-1,9];1;;keep
+335;SEMIO_FAM;ordinal;[-1,9];1;;keep
+336;SEMIO_KAEM;ordinal;[-1,9];1;;keep
+337;SEMIO_KRIT;ordinal;[-1,9];1;;keep
+338;SEMIO_KULT;ordinal;[-1,9];1;;keep
+339;SEMIO_LUST;ordinal;[-1,9];1;;keep
+340;SEMIO_MAT;ordinal;[-1,9];1;;keep
+341;SEMIO_PFLICHT;ordinal;[-1,9];1;;keep
+342;SEMIO_RAT;ordinal;[-1,9];1;;keep
+343;SEMIO_REL;ordinal;[-1,9];1;;keep
+344;SEMIO_SOZ;ordinal;[-1,9];1;;keep
+345;SEMIO_TRADV;ordinal;[-1,9];1;;keep
+346;SEMIO_VERT;ordinal;[-1,9];1;;keep
+347;SHOPPER_TYP;categorical;[-1];1;;one-hot encode
+348;SOHO_KZ;binary;[-1];1;;keep
+349;STRUKTURTYP;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+350;TITEL_KZ;ordinal;[-1,0];1;;keep
+351;UMFELD_ALT;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+352;UMFELD_JUNG;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+353;UNGLEICHENN_FLAG;binary;[];0;"no infromation availabe on codes; could be included though";maybe include
+354;VERDICHTUNGSRAUM;categorical;[0];0;"many categories; no information given; 0 is probably missing value, and thus most data is missing";drop
+355;VERS_TYP;binary;[-1];1;;keep
+356;VHA;ordinal;[0];0;"no information, probably 0 for missing; lots of data missing";drop
+357;VHN;ordinal;[0];0;"no information, probably 0 for missing; lots of data missing";drop
+358;VK_DHT4A;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+359;VK_DISTANZ;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+360;VK_ZG11;ordinal;[];0;"no infromation availabe on codes; could be included though";maybe include
+361;W_KEIT_KIND_HH;ordinal;[-1,0];1;;keep
+362;WOHNDAUER_2008;ordinal;[-1];1;;keep
+363;WOHNLAGE;ordinal;[-1,0];1;;keep
+364;ZABEOTYP;categorical;[-1,9];1;;one-hot encode
+365;ANREDE_KZ;binary;[-1,0];1;;keep
+366;ALTERSKATEGORIE_GROB;ordinal;[-1,0];1;might need reencoding to account for uniform distribution;investigate
