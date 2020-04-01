@@ -63,4 +63,4 @@ During my *Data Science Nanodegree* at [Udacity](https://eu.udacity.com), I comp
 
 [**Link to jupyter notebook**](https://github.com/lkiewidt/Data-Science-Degree/blob/master/Project%2007%20-%20Data%20Science%20Capstone/Arvato%20Project%20Workbook.ipynb)
 
-[**Link to blog post**](...)
+[**Link to blog post**](https://medium.com/@kiewidt/whos-next-in-the-line-adb147404dc9)
