@@ -13,8 +13,7 @@ The following Python libraries are key in the project:
 * seaborn
 
 ## Key Findings
-* neural networks enable to build models for complex tasks, such as image recogniction 
+* neural networks enable to build models for complex tasks, such as image recognition
 * pre-trained convolutional networks (e.g. VGG or DenseNet) provide excellent feature selectors for image recognition
-* the training of the large neural network was sifnificantly speed up by GPU computing
+* the training of the large neural network was significantly speed up by GPU computing
 * the implemented neural network reached an accuracy of more than 70% in only 5 epochs
-
